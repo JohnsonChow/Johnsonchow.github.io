@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    CHOU`WORLD
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="chouworld">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('http://test.img.hoski.cn/bg.jpeg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+<!-- / -->
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">CHOU WORLD</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Ionic专栏/">Ionic专栏</a></li><li><a class="category-link" href="/categories/技术札记/">技术札记</a></li><li><a class="category-link" href="/categories/旅行/">旅行</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/JohnsonChow" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(http://test.img.hoski.cn/18-1-1/51627360.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>NGINX服务器的搭建与通过配置解决同源跨域问题</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本团队在主打产品CRM中通过前端AngularJS调用后台NodeJS接口用了Ajax技术，但是这样问题就出现了，由于NodeJs启动服务与AngularJs用Ajax调用接口同样来自于同一台IP的服务器但是端口不一样，所以产生了同源跨域问题。为此我记录一下内容为了解决同源跨域问题。</p>
+<h2 id="什么是同源跨域问题呢？"><a href="#什么是同源跨域问题呢？" class="headerlink" title="什么是同源跨域问题呢？"></a>什么是同源跨域问题呢？</h2><p>首先浏览器安全的基石是”同源政策”（same-origin policy）。最初，它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页”同源”。所谓”同源”指的是”三个相同”。仅有同协议，同端口和同IP才可以被称为同源。</p>
+<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。 设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？ 很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。 由此可见，”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</p>
+<p>之后，随着互联网的发展，”同源政策”越来越严格。目前，如果非同源，共有三种行为受到限制。</p>
+<ul>
+<li>Cookie、LocalStorage和IndexDB无法读取</li>
+<li>DOM无法获取</li>
+<li>AJAX请求不能发送（本项目所拥有的问题）</li>
+</ul>
+<p>虽然这些限制是必要的，但是有时很不方便，合理的用途也受到影响。下面，我将详细介绍，如何规避上面三种限制。</p>
+<p>其中AJAX请求不能发送是本项目拥有的问题，虽然有些浏览器，例如Chrome可以输入以下命令进入安全模式可以暂时忽略跨域问题，但是这治标不治本。</p>
+<p><strong>Mac使用方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ open -a /Applications/Google\ Chrome.app --args --disable-web-security --user-data-dir</span><br></pre></td></tr></table></figure>
+<h2 id="通过配置Nginx来解决同源跨域问题"><a href="#通过配置Nginx来解决同源跨域问题" class="headerlink" title="通过配置Nginx来解决同源跨域问题"></a>通过配置Nginx来解决同源跨域问题</h2><p>我使用的环境是64位 Ubuntu 14.04。nginx依赖以下模块：</p>
+<ul>
+<li><p>gzip模块需要 zlib 库</p>
+</li>
+<li><p>rewrite模块需要 pcre 库</p>
+</li>
+<li><p>ssl 功能需要openssl库</p>
+</li>
+</ul>
+<p>以下省略三个库的安装过程，直接进入配置详情讲解。</p>
+<p>例如：</p>
+<p><strong>NodeJS为 <a href="http://192.168.10.107:3000" target="_blank" rel="noopener">http://192.168.10.107:3000</a> 为例</strong></p>
+<p><strong>AngularJs调用端口为8000端口</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">location / </span><br><span class="line">&#123;     </span><br><span class="line">	root   qiantai;   #项目名 必须在根目录路径下 项目文件夹</span><br><span class="line">	index  index.html index.htm;  #项目主页  必须在项目目录路径下</span><br><span class="line">&#125;</span><br><span class="line">location ^~ /u-routeasasoe/ &#123;</span><br><span class="line">	proxy_pass  http://192.168.10.107:3000;   #转发地址及相应端口号</span><br><span class="line">	proxy_redirect    off;  </span><br><span class="line">	proxy_set_header  Host $host;</span><br><span class="line">	proxy_set_header  X-Real-IP  $remote_addr;  </span><br><span class="line">	proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>则需要将所有为<code>/u-routeasaseo</code>开头的接口统统转化成 <strong><a href="http://192.168.10.107:3000" target="_blank" rel="noopener">http://192.168.10.107:3000</a></strong>发出的变为同IP,同端口，同协议保证同源已解决问题。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://blog.chouworld.cc/2016/11/02/NGINX服务器的搭建与通过配置解决同源跨域问题/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.chouworld.cc/2016/11/02/NGINX服务器的搭建与通过配置解决同源跨域问题/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
