@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall1.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall1.png">
+	
+			    <title>
+    CHOU`WORLD
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="chouworld" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('https://test.img.hoski.cn/bg.jpeg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+<!-- / -->
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.3.0"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">CHOU WORLD</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Ionic%E4%B8%93%E6%A0%8F/">Ionic专栏</a></li><li><a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%9C%AD%E8%AE%B0/">技术札记</a></li><li><a class="category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/JohnsonChow" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://test.img.hoski.cn/18-1-1/92664526.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Docker volume 挂载时文件或文件夹不存在</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Docker-volume-挂载时文件或文件夹不存在"><a href="#Docker-volume-挂载时文件或文件夹不存在" class="headerlink" title="Docker volume 挂载时文件或文件夹不存在"></a>Docker volume 挂载时文件或文件夹不存在</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>docker volume 可以使我们在启动docker容器时，动态的挂载一些文件（如配置文件）, 以覆盖镜像中原有的文件，但是，挂载一个主机上尚不存在的文件夹或者文件到容器中会怎样呢？LZ在工作中就遇到了这样的问题，故自己实践了一下，记录实验结果如下：</p>
+<h2 id="文件夹挂载"><a href="#文件夹挂载" class="headerlink" title="文件夹挂载"></a>文件夹挂载</h2><p>docker在文件夹挂载上的行为是统一的，具体表现为：</p>
+<ul>
+<li>若文件夹不存在，则先创建出文件夹（若为多层文件夹，则递归创建）</li>
+<li>用host上的文件夹内容覆盖container中的文件夹内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v &#x2F;path-to-folder&#x2F;A:&#x2F;path-to-folder&#x2F;B test-image</span><br></pre></td></tr></table></figure>
+<p>详细说明如下：</p>
+<h3 id="host上文件夹存在，且非空"><a href="#host上文件夹存在，且非空" class="headerlink" title="host上文件夹存在，且非空"></a>host上文件夹存在，且非空</h3><table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">存在的非空文件夹A</td>
+<td align="left">不存在的文件夹B</td>
+<td align="left">先在contanier中创建文件夹B，再将A文件夹中的所有文件copy到B中</td>
+</tr>
+<tr>
+<td align="left">存在的非空文件夹A</td>
+<td align="left">存在的非空文件夹B</td>
+<td align="left">先将container中文件夹B的原有内容清空，再将A中文件copy到B中</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>无论container中的文件夹B是否存在， A都会完全覆盖B的内容</p>
+</blockquote>
+<h3 id="host上文件夹存在，但为空"><a href="#host上文件夹存在，但为空" class="headerlink" title="host上文件夹存在，但为空"></a>host上文件夹存在，但为空</h3><table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">存在的空文件夹A</td>
+<td align="left">存在的非空文件夹B</td>
+<td align="left">container中文件夹B的内容被清空</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>container中对应的文件夹内容被清空</p>
+</blockquote>
+<h3 id="host上文件夹不存在"><a href="#host上文件夹不存在" class="headerlink" title="host上文件夹不存在"></a>host上文件夹不存在</h3><table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">不存在的文件夹A</td>
+<td align="left">存在的非空文件夹B</td>
+<td align="left">在host上创建文件夹A，container中文件夹B的内容被清空</td>
+</tr>
+<tr>
+<td align="left">不存在的文件夹A/B/C</td>
+<td align="left">存在的非空文件夹B</td>
+<td align="left">在host上创建文件夹A/B/C，container中文件夹B的内容被清空</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>container中对应的文件夹内容被清空</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>host上文件夹一定会覆盖container中文件夹：</p>
+<table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">文件夹不存在/文件夹存在但为空</td>
+<td align="left">文件夹不存在/存在但为空/存在且不为空</td>
+<td align="left">container中文件被覆盖（清空）</td>
+</tr>
+<tr>
+<td align="left">文件夹存在且不为空</td>
+<td align="left">文件夹不存在/存在但为空/存在且不为空</td>
+<td align="left">container中文件夹内容被覆盖（原内容清空， 覆盖为host上文件夹内容）</td>
+</tr>
+</tbody></table>
+<h2 id="文件挂载"><a href="#文件挂载" class="headerlink" title="文件挂载"></a>文件挂载</h2><p>文件挂载与文件夹挂载最大的不同点在于：</p>
+<ul>
+<li><strong>docker 禁止用主机上不存在的文件挂载到container中已经存在的文件</strong></li>
+<li>文件挂载不会对同一文件夹下的其他文件产生任何影响</li>
+</ul>
+<p>除此之外， 其覆盖行为与文件夹挂载一致，即：</p>
+<ul>
+<li>用host上的文件的内容覆盖container中的文件的内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v &#x2F;path-to-folder&#x2F;non-existent-config.js:&#x2F;path-to-folder&#x2F;config.js test-image # forbidden</span><br></pre></td></tr></table></figure>
+<p>详细说明如下：</p>
+<h3 id="host上文件不存在"><a href="#host上文件不存在" class="headerlink" title="host上文件不存在"></a>host上文件不存在</h3><table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">不存在的文件configA.js</td>
+<td align="left">已经存在的文件congfigB.js</td>
+<td align="left">报错，Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type. 同时会在host上生成两个空目录 configA.js 和 configB.js, 但是container无法启动</td>
+</tr>
+</tbody></table>
+<h3 id="host上文件存在"><a href="#host上文件存在" class="headerlink" title="host上文件存在"></a>host上文件存在</h3><table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">存在的文件configA.js</td>
+<td align="left">存在的文件congfigB.js</td>
+<td align="left">container中文件名configB.js保持不变,但是文件内容被congfigA.js的内容覆盖了</td>
+</tr>
+<tr>
+<td align="left">存在的文件configA.js</td>
+<td align="left">不存在的文件congfigB.js</td>
+<td align="left">container中新建一个文件configB.js，其内容为configA.js的文件内容， configB.js所在文件下的所有其他文件维持不变</td>
+</tr>
+</tbody></table>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>host上文件一定会覆盖container中文件夹</p>
+<table>
+<thead>
+<tr>
+<th align="left">host</th>
+<th align="left">container</th>
+<th align="left">mount result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">不存在的文件</td>
+<td align="left">已经存在的文件</td>
+<td align="left">禁止行为</td>
+</tr>
+<tr>
+<td align="left">存在的文件</td>
+<td align="left">不存在的文件/已经存在的文件</td>
+<td align="left">新增/覆盖 （若目录不存在则会创建目录）</td>
+</tr>
+</tbody></table>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><h3 id="文件夹挂载-1"><a href="#文件夹挂载-1" class="headerlink" title="文件夹挂载"></a>文件夹挂载</h3><ul>
+<li>允许不存在的文件夹或者存在的空文件夹挂载进container, container中对应的文件夹将被清空</li>
+<li>非空文件夹挂载进container将会覆盖container中原有文件夹</li>
+</ul>
+<h3 id="文件挂载-1"><a href="#文件挂载-1" class="headerlink" title="文件挂载"></a>文件挂载</h3><ul>
+<li>禁止将不存在的文件挂载进container中已经存在的文件上</li>
+<li>存在的文件挂载进container中将会覆盖container中对应的文件， 若文件不存在则新建</li>
+</ul>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ol>
+<li>从上面的分析可知，文件夹挂载以整个文件夹为单位进行文件覆盖，故可在需要将大量文件挂载进container时使用，另外，如果挂载一个空文件夹或者不存在的文件夹，一般是做逆向使用： 即容器启动后，可能会在容器内挂载点的文件夹下生成一些文件（如日志），此时，在对应的host上的文件夹内就能直接看到。</li>
+<li>文件挂载由于只会覆盖单个文件而不会影响container中同一文件夹下的其他文件，常常被用来挂载配置文件，以在运行时，动态的修改默认配置。</li>
+</ol>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://blog.chouworld.cc/2021/02/16/Docker%20volume%20%E6%8C%82%E8%BD%BD%E6%97%B6%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blog.chouworld.cc/2021/02/16/Docker%20volume%20%E6%8C%82%E8%BD%BD%E6%97%B6%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8D%E5%AD%98%E5%9C%A8/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
